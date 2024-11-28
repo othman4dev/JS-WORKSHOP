@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript WORKSHOP</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title"><img src="javascript-logo-F248CC9425-seeklogo.com.png" class="js-logo" alt="">JavaScript Workshop</h1>
+      <div class="button-group">
+        <button class="header-btn">
+          <i class="bi bi-house-door-fill"></i>
+          <a href="index.html">Home</a>
+        </button>
+        <button class="header-btn">
+            <i class="bi bi-info-circle-fill"></i>
+          <a href="about.html">About</a>
+        </button>
+        <button class="header-btn">
+            <i class="bi bi-chat-dots-fill"></i>
+          <a href="contact.html">Contact</a>
+        </button class="header-btn">
+        <button class="header-btn" onclick="toggleDropDown()">
+          <i class="bi bi-person-fill"></i>
+          Otman KHARBOUCH
+        </button>
+      </div>
+    </header>
+    <main>
+        <form class="info-form" onsubmit="return false;">
+            <h1 class="form-title">
+                Save a new user
+            </h1>
+            <label class="label-text">
+                Full Name
+            </label>
+            <input type="text" class="inp" name="fullname" id="nameInput">
+            <label class="label-text">
+                Email
+            </label>
+            <input type="text" class="inp" name="email" id="emailInput">
+            <button class="save-btn" onclick="saveUser()">
+                Save
+            </button>
+        </form>
+        <div class="users-list">
+            <h1 class="list-title">
+                Users List
+            </h1>
+            <div class="list" id="users-list">
+                <!-- <li class="list-item">
+                    <p class="item-text">
+                        Otman KHARBOUCH
+                    </p>
+                    <p class="item-email">
+                        otmankharbouch813@gmail.com
+                    </p>
+                    <button class="delete-btn">
+                        <i class="bi bi-trash-fill"></i>
+                    </button>
+                </li> -->
+            </div>
+        </div>
+    </main>
+    <div id="userDropDown" style="display: none;">
+        <button class="dropdown-option-btn">
+            <i class="bi bi-person-fill"></i>
+            Otman KHARBOUCH
+        </button>
+        <div class="dropdown-options">
+            <a class="dropdown-option" href="#">
+                <i class="bi bi-person-circle"></i> <p class="option-text">Profile</p>
+            </a>
+            <a class="dropdown-option" href="#">
+                <i class="bi bi-gear-fill"></i> <p class="option-text">Settings</p>
+            </a>
+            <a class="dropdown-option" href="#">
+                <i class="bi bi-box-arrow-right"></i> <p class="option-text">Logout</p>
+            </a>
+        </div>
+    </div>
+  </body>
+</html>
+<script src="script.js" defer></script>
